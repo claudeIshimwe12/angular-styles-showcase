@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+.main {
+  //   min-height: calc(100vh - 100px);
+  padding: $base-padding * 8;
+  .title {
+    font-size: $base-font-size * 4;
+  }
+
+  .text {
+    font-size: $base-font-size * 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: $base-padding * 2;
+    .title {
+      font-size: $base-font-size * 2;
+    }
+    .text {
+      font-size: $base-font-size;
+    }
+  }
+}

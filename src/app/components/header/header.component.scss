@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.link {
+  font-size: $base-font-size;
+}
+
+@media (max-width: 600px) {
+  .link {
+    padding: calc($base-font-size / 2);
+  }
+}

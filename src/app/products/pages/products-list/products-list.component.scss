@@ -1,0 +1,56 @@
+@import "../../../styles/variables";
+
+.products-list {
+  padding: $base-padding $base-padding * 8;
+  max-width: 100vw;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: dense;
+  gap: 1rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 600px) {
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  .products-list {
+    padding: $base-padding $base-padding * 2;
+  }
+}
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $base-margin * 10;
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    background: radial-gradient(circle closest-side, #000 94%, #0000)
+      right/calc(200% - 1em) 100%;
+    animation: l24 1s infinite alternate linear;
+  }
+  .loader::before {
+    content: "Loading...";
+    line-height: 1em;
+    color: #0000;
+    background: inherit;
+    background-image: radial-gradient(circle closest-side, #fff 94%, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes l24 {
+    100% {
+      background-position: left;
+    }
+  }
+}

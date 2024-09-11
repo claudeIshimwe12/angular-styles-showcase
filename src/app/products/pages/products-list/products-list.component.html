@@ -1,0 +1,17 @@
+<section class="products-list">
+  <h1>Products List</h1>
+  <div
+    *ngIf="products$ | async as products; else loader"
+    class="grid grid-cols-4"
+  >
+    @for (product of products; track $index) {
+    <product [product]="product"></product>
+
+    }
+  </div>
+  <ng-template #loader>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+  </ng-template>
+</section>

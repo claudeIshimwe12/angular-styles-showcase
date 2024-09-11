@@ -1,0 +1,20 @@
+<div class="product-card">
+  <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+
+  <div class="product-info">
+    <h3 class="product-title">{{ product.title.slice(0, 20) }}...</h3>
+    <p class="product-category">{{ product.category }}</p>
+
+    <div class="product-rating">
+      <span class="rating">{{ product.rating.rate }} / 5</span>
+      <span class="rating-count">({{ product.rating.count }} reviews)</span>
+    </div>
+
+    <p class="product-description">{{ product.description.slice(0, 60) }}...</p>
+
+    <div class="product-footer">
+      <span class="product-price">${{ product.price }}</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<nav class="navbar flex justify-between">
+  <!-- <h1 class="site-title">Let Designs</h1> -->
+  <img src="assets/images/icon-logo.svg " alt="logo" />
+  <ul class="flex justify-between gap-4">
+    <li class="text-hover-secondary">
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="link"
+        >Home
+      </a>
+    </li>
+    <li class="1 text-hover-secondary">
+      <a
+        routerLink="/products"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="link"
+        >Products
+      </a>
+    </li>
+  </ul>
+  <div (click)="toggleTheme()">
+    @if (switchedToDarkMode) {
+
+    <img src="assets/images/icon-moon.svg" alt="toggle icon-toggle-dark" />
+    } @else {
+
+    <img src="assets/images/icon-sun.svg" alt="toggle icon-toggle-light" />
+    }
+  </div>
+</nav>
