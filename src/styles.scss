@@ -52,10 +52,6 @@ $dark-theme-colors: (
 @mixin theme($theme-colors) {
   background-color: map-get($theme-colors, background);
   color: map-get($theme-colors, text);
-
-  a {
-    color: map-get($theme-colors, primary);
-  }
 }
 
 // Light theme class
