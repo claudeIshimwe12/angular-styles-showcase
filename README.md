@@ -1,6 +1,12 @@
-# AngularStyleShowacase
+# Angular Style Showcase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+This project is an Angular application styled with Sass and tested using Jest. It features lazy loading for the products route, enhancing performance and efficiency.
+
+## Live Preview
+
+[Link to the hosted page](https://silver-parfait-836201.netlify.app/)
+
+> **Note:** follow the above link to preview the hosted demo of the project
 
 ## Development server
 
