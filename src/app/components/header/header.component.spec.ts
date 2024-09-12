@@ -1,15 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeaderComponent } from './header.component';
-import { ProductsService } from '../../products/services/products.service';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { HeaderComponent } from "./header.component";
+import { ProductsService } from "../../products/services/products.service";
 
-describe('HeaderComponent', () => {
+describe("HeaderComponent", () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let mockProductsService: any;
 
   beforeEach(async () => {
     mockProductsService = {
-      getTheme: jest.fn().mockReturnValue('light-theme'),
+      getTheme: jest.fn().mockReturnValue("light-theme"),
       setTheme: jest.fn(),
     };
 
@@ -25,12 +25,12 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  describe('toggleTheme', () => {
-    it('should toggle the `switchedToDarkMode` flag', () => {
+  describe("toggleTheme", () => {
+    it("should toggle the `switchedToDarkMode` flag", () => {
       expect(component.switchedToDarkMode).toBe(false);
 
       component.toggleTheme();
@@ -40,22 +40,22 @@ describe('HeaderComponent', () => {
       expect(component.switchedToDarkMode).toBe(false);
     });
 
-    it('should switch the theme from light to dark and call `setTheme`', () => {
-      mockProductsService.getTheme.mockReturnValue('light-theme');
+    it("should switch the theme from light to dark and call `setTheme`", () => {
+      mockProductsService.getTheme.mockReturnValue("light-theme");
 
       component.toggleTheme();
 
       expect(mockProductsService.getTheme).toHaveBeenCalledTimes(1);
-      expect(mockProductsService.setTheme).toHaveBeenCalledWith('dark-theme');
+      expect(mockProductsService.setTheme).toHaveBeenCalledWith("dark-theme");
     });
 
-    it('should switch the theme from dark to light and call `setTheme`', () => {
-      mockProductsService.getTheme.mockReturnValue('dark-theme');
+    it("should switch the theme from dark to light and call `setTheme`", () => {
+      mockProductsService.getTheme.mockReturnValue("dark-theme");
 
       component.toggleTheme();
 
       expect(mockProductsService.getTheme).toHaveBeenCalledTimes(1);
-      expect(mockProductsService.setTheme).toHaveBeenCalledWith('light-theme');
+      expect(mockProductsService.setTheme).toHaveBeenCalledWith("light-theme");
     });
   });
 });

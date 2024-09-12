@@ -5,8 +5,7 @@
     class="grid grid-cols-4"
   >
     @for (product of products; track $index) {
-    <product [product]="product"></product>
-
+      <app-product [product]="product"></app-product>
     }
   </div>
   <ng-template #loader>

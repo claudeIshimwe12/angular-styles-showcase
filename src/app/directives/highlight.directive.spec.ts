@@ -1,25 +1,25 @@
-import { HighlightDirective } from './highlight.directive';
-import { ElementRef } from '@angular/core';
+import { HighlightDirective } from "./highlight.directive";
+import { ElementRef } from "@angular/core";
 
-describe('HighlightDirective', () => {
+describe("HighlightDirective", () => {
   let directive: HighlightDirective;
   let mockElementRef: ElementRef;
 
   beforeEach(() => {
     mockElementRef = {
-      nativeElement: document.createElement('div'),
+      nativeElement: document.createElement("div"),
     } as ElementRef;
 
     directive = new HighlightDirective(mockElementRef);
   });
 
-  it('should create an instance', () => {
+  it("should create an instance", () => {
     expect(directive).toBeTruthy();
   });
 
-  it('should apply background color #CCD5AE to the element', () => {
+  it("should apply background color #CCD5AE to the element", () => {
     expect(mockElementRef.nativeElement.style.backgroundColor).toBe(
-      'rgb(204, 213, 174)'
+      "rgb(204, 213, 174)",
     );
   });
 });
